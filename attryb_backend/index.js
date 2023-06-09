@@ -5,6 +5,7 @@ var cors = require("cors");
 const { connection } = require("./config/db");
 require("dotenv").config();
 const authRoutes = require('./route/user.route');
+const cardetailsRouter = require("./route/car.route");
 
 const port = 8000 || process.env.PORT;
 
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/auth', authRoutes);
+app.use("/cardetails", cardetailsRouter);
 
 
 app.listen(port, async () => {

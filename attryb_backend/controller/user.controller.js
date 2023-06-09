@@ -4,14 +4,14 @@ const User = require('../model/user.model');
 async function register(req, res) {
     try {
       // Extract registration data from the request body
-      const { name, username, password } = req.body;
+      const { name, username, password,role } = req.body;
 
       if (!name || !username || !password) {
         return res.status(400).json({ message: 'Missing required fields' });
       }
   
       // Create a new user object
-      const newUser = new User({ name, username, password });
+      const newUser = new User({ name, username, password,role });
   
       // Save the user to the database
       const savedUser = await newUser.save();
