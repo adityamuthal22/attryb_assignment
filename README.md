@@ -19,7 +19,7 @@ This task is based on Javascript, ReactJs, Rest API,ChakraUI, NodeJS, MongoDB, E
 * Login and Signup functionality.
 * Fectching car Details .
 * Filter carDetails by date color, mileage, price.
-* Using redux-thunk.
+* Using redux
 * Using ChakraUI
 
 ### Live Link :
